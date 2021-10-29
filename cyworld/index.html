@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>싸이월드</title>
+    <link href="styles/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script>
+        const menuHome = () => {
+            const iframe = document.getElementById("iframe")
+            const btn_home = document.getElementById("btn_home")
+            const btn_game = document.getElementById("btn_game")
+            const btn_jukebox = document.getElementById("btn_jukebox")
+
+
+            iframe.setAttribute('src','home.html')
+            btn_home.style    = "background-color : white;   color : black"
+            btn_game.style    = "background-color : #298EB5; color : white"
+            btn_jukebox.style = "background-color : #298EB5; color : white"
+        } 
+        const menuGame = () => {
+            iframe.setAttribute('src','game.html')
+            btn_home.style    = "background-color : #298EB5; color : white"
+            btn_game.style    = "background-color : white;   color : black"
+            btn_jukebox.style = "background-color : #298EB5; color : white"
+
+        }
+        const menuJuckbox = () => {
+            iframe.setAttribute('src','jukebox.html')
+            btn_home.style    = "background-color : #298EB5; color : white"
+            btn_game.style    = "background-color : #298EB5; color : white"
+            btn_jukebox.style = "background-color : white;   color : black"
+
+        }        
+    </script>
+</head>
+<body>
+    <div class="background">
+        <div class="outerbox">
+            <div class="wrapper">
+                
+                <!-- left -->
+                <div class="wrapper__left">
+                    <div class="wrapper__left__header">
+                        <div class ="today">
+                            TODAY <span class="zero">0</span> | TOTAL <span class="count">12345</span> 
+                        </div>
+                    </div>
+                    <div class="wrapper__left__body">
+                        <div class="header">
+                            <div class="headerGrey">
+                            </div>
+                            <div class="line"></div>
+                            <div class="profileWrapper">
+                                <div class="profile">
+                                <i class="fas fa-file-signature"></i> 이름
+                                </div>
+                                <div class="profile">
+                                    <i class="fas fa-phone"></i> Phone
+                                </div>
+                                <div class="profile">
+                                    <i class="fas fa-envelope-square"></i> E-mail
+                                </div>
+                                <div class="profile">
+                                    <i class="fas fa-images"></i> 인스타그램
+                                </div>
+
+                                <i class="fab fa-apple fffff"></i>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="feelWrapper">
+                                <div class="feel">오늘의 기분</div>
+                                <select class="feelSelect">
+                                    <option>기쁨 😀</option>
+                                    <option>슬픔 😭</option>
+                                    <option>분노 😡</option>
+                                    <option>행복 😊</option>
+                                    <option>웃음 😆</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right -->
+                <div class="wrapper__right">
+                    <div class="wrapper__right__header">
+                        <div class="wrapper__right__title">사이좋은 사람들, 싸이월드</div>
+                        <div class="wrapper__right__setting">사생활보호설정<i class="fas fa-caret-right bbbb"></i></div>
+
+                    </div>
+                    <div class="wrapper__right__body">
+                        <!-- <iframe src="home.html"></iframe> -->
+                        <iframe id="iframe" src="jukebox.html"></iframe>
+                    </div>
+                </div>
+
+                <!-- navigation -->
+                <div class="navigation">
+                    <div class="navigation_item" id="btn_home" onclick="menuHome()">Home</div>
+                    <div class="navigation_item" id="btn_game" onclick="menuGame()">Game</div>
+                    <div class="navigation_item" id="btn_jukebox" onclick="menuJuckbox()">Jukebox</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

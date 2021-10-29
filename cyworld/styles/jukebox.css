@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html , body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px;
+    /* background-color: goldenrod; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper_header{
+    width: 464px;
+}
+
+.wrapper_header .line{
+    border-bottom: 1px solid grey ;
+    margin : 8px 0px;
+}
+
+.wrapper_body{
+    width: 464px;
+}

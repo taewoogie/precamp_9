@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>돔(DOM) 조작하기</title>
+    <script>
+        function onClick(){
+            // alert("Hi~ World~")
+            document.getElementById("hello").innerText = "Hi~ World~"
+        }
+
+        function counter(){
+            // count 버튼 클릭 시 숫자 증가 하는 스크립트
+            // html 내의 문서들은 문자들로 인식하여 숫자로 변환해야 한다.
+            const temp = Number(document.getElementById("count").innerText) + 1
+            document.getElementById("count").innerText = temp
+        }
+    </script>
+</head>
+<body>
+    <div id="hello">Hello World!</div>
+    <button onclick="onClick()">Click!</button>
+
+    <div id="count">0</div>
+    <button onclick="counter()">Count!</button>
+</body>
+</html>

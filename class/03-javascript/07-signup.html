@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>이벤트 감지</title>
+    <script>
+        const signup = () => {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const passwordConfirm = document.getElementById("passwordConfirm").value;
+            const signup = document.getElementById("signup");
+
+            if(!email == "" && !password == "" && !passwordConfirm == ""){
+                signup.setAttribute('style','background-color : yellow;');
+                signup.disabled=false;
+            } else {
+                signup.setAttribute('style','background-color : none;');
+                signup.disabled=true;
+            }
+        }
+        
+    </script>
+
+</head>
+<body>
+    <input id="email"           type="text"     placeholder="이메일"      oninput="signup()"/><br />
+    <input id="password"        type="password" placeholder="비밀번호"     oninput="signup()"/><br />
+    <input id="passwordConfirm" type="password" placeholder="비밀번호 확인" oninput="signup()"/><br />
+    <button id="signup" disabled="true">회원가입</button> 
+
+</body>
+</html>

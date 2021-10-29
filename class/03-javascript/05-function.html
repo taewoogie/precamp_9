@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>function</title>
+    <style>
+        body{
+            /* display: flex; */
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .token_info{
+            display: flex;
+        }
+
+        #token{
+
+            margin-left : 5px;
+            margin-right: 5px;
+            padding-top: 5px;
+            color: chocolate;
+        }
+
+        #button{
+            background-color: whitesmoke;
+            border : 1px solid grey;
+            font-size: 12px;
+            border-radius: 8px;
+        }
+
+        .timer_info{
+            display: flex;
+            /* justify-content: space-between; */
+            margin-top: 10px;
+            width: 200px;
+        }
+
+        #timer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin : 0 5px;
+            /* padding-top : 3px; */
+            width: 60px;
+            color: red;
+            background-color: whitesmoke;
+            border: 1px dotted grey;
+            border-radius: 8px;
+        }
+
+        .timer_info .button{
+            display: flex;
+        }
+
+        #onTimer{
+            margin-right: 5px;
+            border: 0px solid grey;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+
+        #clearTimer{
+            border: 0px solid grey;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+
+    </style>
+    <script>
+        // 인증번호 전송
+        const send = () => {
+
+            // id가 token인 내용(문자)을 가져와 상수화 시킨다. [ 생략 가능 ]
+            Number(document.getElementById("token").innerText)
+
+            // 새로운 변수(newToken)에 6자리 인증번호를 생성하여 담아둔다.
+            const newToken = Math.floor(Math.random() * 1000000).toString().padStart( 6 , "0" )
+
+            // 현재 문서 내에 id가 token인 내용(문자)을 새로운 변수(newToken)에 저장되어 있는 인증번호로 변환한다.
+            document.getElementById("token").innerText = newToken
+
+        }
+
+        // 타이머
+        let setIntervalID;
+        const onTimer = () => {
+            alert("타이머 시작!");
+
+            // 타이머버튼 클릭시 비활성화
+            const onTimerBtn = document.getElementById("onTimer");
+                  onTimerBtn.disabled = true;
+
+            let time = 10;
+            setIntervalID = setInterval(function(){
+                const minutes = Math.floor( time / 60 ).toString().padStart(2,"0");
+                const seconds = String(time % 60).padStart(2,"0");
+
+                if(time >= 0){
+                    document.getElementById("timer").innerText = minutes + ":" + seconds
+                    time--;
+                    
+                    if(minutes == 0 && seconds == 0){
+                        time = 10;
+                        send();
+                    }
+                }
+            },1000)
+        }
+
+        const clearTimer = () => {
+            alert("타이머 종료!");
+            clearInterval(setIntervalID);
+            
+            // 타이머 시간 초기화
+            document.getElementById("timer").innerText = "00" + ":" + "00"; 
+            
+            const onTimerBtn = document.getElementById("onTimer");
+                  onTimerBtn.disabled = false;
+        }
+    </script>
+</head>
+<body>
+    <div class="token_info">
+        <div    id="token">000000</div>
+        <button id="button" onclick="send()">인증번호 전송</button>
+    </div>
+
+    <div class="timer_info">
+        <div    id="timer">00:00</div>
+        <div class="button">
+            <button id="onTimer"    onclick="onTimer()">타이머</button>
+            <button id="clearTimer" onclick="clearTimer()">타이머 종료</button>
+        </div>
+    </div>
+</body>
+</html>

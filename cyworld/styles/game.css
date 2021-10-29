@@ -1,0 +1,229 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.wrapper_header{
+    width: 100%;
+    height: 25px;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0 30px;
+}
+
+.wrapper_header .title{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+.wrapper_header .game{
+    width: 39px;
+    height: 17px;
+    
+    font-family: Malgun Gothic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+
+    color: #55B2D4;
+}
+
+.wrapper_header .sub_title{
+    width: 60px;
+    height: 8px;
+    padding-top: 5px;
+    font-family: Sci Fied Bitmap;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 8px;
+    /* identical to box height */
+
+    letter-spacing: -0.08em;
+
+    color: #000000;
+}
+
+.wrapper_header .line{
+    width: 464px;
+    height: 0px;
+    padding: 0 30px;
+    left: 296px;
+    top: 133px;
+
+    border: 1px solid #999999;
+}
+
+.wrapper_word{
+    width: 222px;
+    height: 168px;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid grey;
+    border-radius: 15px;
+
+}
+
+.wrapper_word_header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 끝말잇기 */
+.wrapper_word_header .title{
+    color: black;
+    font-size: 11px;
+    padding-top: 5px;
+    font-family: Malgun Gothic;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+/* 제시어 : 코드캠프 */
+.wrapper_word_header .word_title{
+    color: #999999;
+    font-size: 10px;
+    padding-top: 5px;
+}
+
+/* 검색창 부모 */
+.wrapper_word_body{
+    width: 100%;
+    /* background-color: steelblue; */
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 8px;
+}
+
+/* 검색창 */
+.wrapper_word_body .word_text{
+    width: 136px;
+    height: 24px;
+    border : 1px solid #000000;
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+/* 검색 버튼 */
+.wrapper_word_body .word_search{
+    width: 38px;
+    height: 24px;
+    font-size: 11px;
+    border : 1px solid #000000;
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+/* 결과 */
+.wrapper_word_footer{
+    /* background-color: tomato; */
+    font-size: 11px;
+    font-weight: 700;
+    color: #999999;
+}
+
+/* 로또 부모*/
+.wrapper_lotto{
+    width: 222px;
+    height: 168px;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+
+/* 로또 헤더 */
+.wrapper_lotto_header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper_lotto_header .title{
+    color: black;
+    font-size: 13px;
+    font-family: Malgun Gothic;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.wrapper_lotto_header .word_title{
+    color: #999999;
+    font-size: 10px;
+    padding-top: 3px;
+}
+
+/* 로또 번호 */
+.wrapper_lotto_body{
+
+}
+
+.wrapper_lotto_body .number_text{
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #FFE400;
+    width: 130px;
+    height: 21px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /* 폰트 */
+    font-family: Malgun Gothic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    color: #000000;
+}
+
+/* 로또 버튼 */
+.wrapper_lotto_footer{
+
+}
+
+.wrapper_lotto_footer .lotto_button{
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 62px;
+    height: 24px;
+
+    /* 폰트 */
+    font-family: Malgun Gothic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    color: #010101;
+}
